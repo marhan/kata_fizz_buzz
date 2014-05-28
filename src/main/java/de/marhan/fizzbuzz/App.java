@@ -1,4 +1,4 @@
-package main.java.de.kata.fizzbuzz;
+package de.marhan.fizzbuzz;
 
 /**
  * Hello world!

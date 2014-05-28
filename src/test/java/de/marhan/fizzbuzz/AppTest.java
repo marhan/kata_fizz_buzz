@@ -1,4 +1,4 @@
-package test.java.de.kata.fizzbuzz;
+package de.marhan.fizzbuzz;
 
 import junit.framework.Test;
 import junit.framework.TestCase;
