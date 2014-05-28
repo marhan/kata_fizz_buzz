@@ -1,4 +1,4 @@
-kata_fizz_buzz
+Fizz Buzz Kata
 ==============
 
-Fizz Buzz Kata
+
