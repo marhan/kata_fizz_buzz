@@ -3,7 +3,7 @@
     <modelVersion>4.0.0</modelVersion>
     <groupId>de.marhan.fizzbuzz</groupId>
     <artifactId>kata_fizz_buzz</artifactId>
-    <name>kata-roman-numerals</name>
+    <name>kata_fizz_buzz</name>
     <version>1.0-SNAPSHOT</version>
     <url>https://github.com/marhan/kata_fizz_buzz</url>
     <scm>
