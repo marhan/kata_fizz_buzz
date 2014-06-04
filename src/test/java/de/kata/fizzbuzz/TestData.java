@@ -20,7 +20,11 @@ public class TestData {
         testData.put(15, "FizzBuzz");
         testData.put(18, "Fizz");
         testData.put(20, "Buzz");
-
+        testData.put(21, "Fizz");
+        testData.put(24, "Fizz");
+        testData.put(25, "Buzz");
+        testData.put(27, "Fizz");
+        testData.put(30, "FizzBuzz");
         maxNumber = getHighestNumber();
     }
 
