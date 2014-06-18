@@ -1,6 +1,5 @@
 package de.kata.fizzbuzz;
 
-import org.junit.Before;
 import org.junit.Test;
 
 import java.util.Arrays;
@@ -13,13 +12,15 @@ public class FizzBuzzTest {
 
     private FizzBuzz fizzBuzz = new FizzBuzz();
 
-    private List<Integer> expectedAsNumber = Arrays.asList(1, 2, 4, 7, 8, 11, 13, 14, 16, 17, 19);
+    private List<Integer> expectedAsNumber = Arrays.asList(1, 2, 4, 8, 11, 13, 16, 17, 19);
 
     private List<Integer> expectedAsFizz = Arrays.asList(3, 6, 9, 12, 18);
 
     private List<Integer> expectedAsBuzz = Arrays.asList(5, 10, 20);
 
     private List<Integer> expectedAsFizzBuzz = Arrays.asList(15, 30, 45);
+
+    private List<Integer> expectedAsWhizz = Arrays.asList(7, 14, 21, 28);
 
     @Test
     public void numbersExpected() {
@@ -30,22 +31,27 @@ public class FizzBuzzTest {
 
     @Test
     public void fizzExpected() {
-        for (Integer number : expectedAsFizz) {
-            assertThat(fizzBuzz.say(number), is("Fizz"));
-        }
+        assertNumbers(expectedAsFizz, "Fizz");
     }
 
     @Test
     public void buzzExpected() {
-        for (Integer number : expectedAsBuzz) {
-            assertThat(fizzBuzz.say(number), is("Buzz"));
-        }
+        assertNumbers(expectedAsBuzz, "Buzz");
     }
 
     @Test
     public void fizzBuzzExpected() {
-        for (Integer number : expectedAsFizzBuzz) {
-            assertThat(fizzBuzz.say(number), is("FizzBuzz"));
+        assertNumbers(expectedAsFizzBuzz, "FizzBuzz");
+    }
+
+    @Test
+    public void whizzExpected() {
+        assertNumbers(expectedAsWhizz, "Whizz");
+    }
+
+    private void assertNumbers(List<Integer> numbers, String expectation) {
+        for (Integer number : numbers) {
+            assertThat(fizzBuzz.say(number), is(expectation));
         }
     }
 }
