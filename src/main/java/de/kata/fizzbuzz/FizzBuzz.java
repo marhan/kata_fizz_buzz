@@ -1,21 +1,43 @@
 package de.kata.fizzbuzz;
 
 
+import java.util.HashMap;
+import java.util.Map;
+import java.util.Set;
+import java.util.TreeMap;
+
 public class FizzBuzz {
 
-    public String say(int i) {
-        return isFizzBuzz(i) ? "FizzBuzz" : isFizz(i) ? "Fizz" : isBuzz(i) ? "Buzz" : String.valueOf(i);
+    private TreeMap<Integer, String> replacements;
+
+    public FizzBuzz() {
+        replacements = new TreeMap<>();
+        replacements.put(15, "FizzBuzz");
+        replacements.put(7, "Whizz");
+        replacements.put(5, "Buzz");
+        replacements.put(3, "Fizz");
     }
 
-    private boolean isFizzBuzz(int i) {
-        return isFizz(i) && isBuzz(i);
+    public String say(Integer number) {
+
+        if(isReplaceable(number)) {
+           return replace(number);
+        }
+
+        return String.valueOf(number);
     }
 
-    private boolean isBuzz(int i) {
-        return i % 5 == 0;
+    private boolean isReplaceable(Integer number) {
+        return replace(number) != null;
     }
 
-    private boolean isFizz(int i) {
-        return i % 3 == 0;
+    private String replace(Integer number) {
+        for (Integer key : replacements.descendingKeySet()) {
+            if(number % key == 0) {
+                return replacements.get(key);
+            }
+        }
+        return null;
     }
+
 }

@@ -50,4 +50,10 @@ public class FizzBuzzTest {
         String output = fizzBuzz.say(15);
         assertThat(output, is("FizzBuzz"));
     }
+
+    @Test
+    public void sevenIsWhizz() {
+        String output = fizzBuzz.say(7);
+        assertThat(output, is("Whizz"));
+    }
 }

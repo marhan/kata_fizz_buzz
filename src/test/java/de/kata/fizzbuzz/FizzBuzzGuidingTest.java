@@ -18,12 +18,12 @@ public class FizzBuzzGuidingTest {
     @Test
     public void iterateOverTestData() {
         GuidingTestData guidingTestData = new GuidingTestData();
-        guidingTestData.prepareForIteration2();
+        guidingTestData.prepareForIteration3();
 
         for (int i = 1; i <= guidingTestData.getHighestNumber(); i++) {
             String expected = guidingTestData.getResultFor(i);
             String output = fizzBuzz.say(i);
-            assertThat(output, is(expected));
+            assertThat(String.format("Expectation failed for %s", i), output, is(expected));
         }
     }
 }
