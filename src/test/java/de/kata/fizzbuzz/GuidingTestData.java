@@ -13,7 +13,6 @@ public class GuidingTestData {
     }
 
     private Map<Integer, String> replacements;
-    private Integer maxNumber;
 
     public void prepareForIteration1() {
         replacements = new HashMap<Integer, String>();

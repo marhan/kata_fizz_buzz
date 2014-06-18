@@ -15,45 +15,6 @@ public class FizzBuzzTest {
         fizzBuzz = new FizzBuzz();
     }
 
-    @Test
-    public void oneIsOne() {
-        String output = fizzBuzz.say(1);
-        assertThat(output, is("1"));
-    }
 
-    @Test
-    public void twoIsTwo() {
-        String output = fizzBuzz.say(2);
-        assertThat(output, is("2"));
-    }
 
-    @Test
-    public void threeIsFizz() {
-        String output = fizzBuzz.say(3);
-        assertThat(output, is("Fizz"));
-    }
-
-    @Test
-    public void fourIsFour() {
-        String output = fizzBuzz.say(4);
-        assertThat(output, is("4"));
-    }
-
-    @Test
-    public void fiveIsBuzz() {
-        String output = fizzBuzz.say(5);
-        assertThat(output, is("Buzz"));
-    }
-
-    @Test
-    public void fifthTeenIsFizzBuzz() {
-        String output = fizzBuzz.say(15);
-        assertThat(output, is("FizzBuzz"));
-    }
-
-    @Test
-    public void sevenIsWhizz() {
-        String output = fizzBuzz.say(7);
-        assertThat(output, is("Whizz"));
-    }
 }

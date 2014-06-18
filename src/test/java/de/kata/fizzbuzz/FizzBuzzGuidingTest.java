@@ -15,6 +15,7 @@ public class FizzBuzzGuidingTest {
         fizzBuzz = new FizzBuzz();
     }
 
+/*
     @Test
     public void iterateOverTestData() {
         GuidingTestData guidingTestData = new GuidingTestData();
@@ -26,4 +27,5 @@ public class FizzBuzzGuidingTest {
             assertThat(String.format("Expectation failed for %s", i), output, is(expected));
         }
     }
+*/
 }
