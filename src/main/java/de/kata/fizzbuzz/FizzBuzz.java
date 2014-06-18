@@ -1,5 +1,6 @@
 package de.kata.fizzbuzz;
 
+
 public class FizzBuzz {
 
     public String say(int i) {
