@@ -1,10 +1,7 @@
 package de.kata.fizzbuzz;
 
-import org.junit.Assert;
 import org.junit.Before;
 import org.junit.Test;
-
-import java.util.Map;
 
 import static org.hamcrest.core.Is.is;
 import static org.junit.Assert.assertThat;
@@ -52,14 +49,5 @@ public class FizzBuzzTest {
     public void fifthTeenIsFizzBuzz() {
         String output = fizzBuzz.say(15);
         assertThat(output, is("FizzBuzz"));
-    }
-
-    @Test
-    public void iterateOverTestData() {
-        for (int i = 1; i <= TestData.getMaxNumber(); i++) {
-            String expected = TestData.getResultFor(i);
-            String output = fizzBuzz.say(i);
-            assertThat(output, is(expected));
-        }
     }
 }
