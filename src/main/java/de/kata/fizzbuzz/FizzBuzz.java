@@ -8,24 +8,36 @@ import java.util.TreeMap;
 
 public class FizzBuzz {
 
+    private TreeMap<Integer, String> replacements = new TreeMap<>();
+
+    public FizzBuzz() {
+        replacements.put(7, "Whizz");
+        replacements.put(15, "FizzBuzz");
+        replacements.put(3, "Fizz");
+        replacements.put(5, "Buzz");
+    }
+
     public String say(Integer number) {
 
-        if (number % 7 == 0) {
-            return "Whizz";
-        }
-
-        if (number % 5 == 0 && number % 3 == 0) {
-            return "FizzBuzz";
-        }
-
-        if (number % 5 == 0) {
-            return "Buzz";
-        }
-
-        if (number % 3 == 0) {
-            return "Fizz";
+        if(isReplaceable(number)) {
+           return replace(number);
         }
 
         return String.valueOf(number);
+    }
+
+    private String replace(Integer number) {
+
+        for(Integer key : replacements.descendingKeySet()){
+            if(number % key == 0) {
+               return replacements.get(key);
+            }
+        }
+
+        return null;
+    }
+
+    private boolean isReplaceable(Integer number) {
+        return replace(number) != null;
     }
 }
